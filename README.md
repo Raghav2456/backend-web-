@@ -1,6 +1,4 @@
-# IntellMeet - Member 1 Backend Foundation
-
-This repository contains the Member 1 backend scope for the Zidio IntellMeet project:
+Backend scope for the Zidio IntellMeet project:
 
 - Next.js app setup with TypeScript and Tailwind CSS
 - MongoDB Atlas schema managed with Mongoose
