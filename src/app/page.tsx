@@ -16,11 +16,11 @@ export default async function HomePage() {
       <section className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div>
           <h1 className="mt-0 max-w-3xl text-5xl font-bold leading-tight text-ink md:text-6xl">
-            IntellMeet auth, database, and RBAC foundation
+            LOOP – Auth, RBAC & Workspace Foundation
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
-            Member 1 scope is ready for the rest of the platform: PostgreSQL models, Prisma,
-            NextAuth login, Admin/Analyst/Viewer roles, workspace isolation, and seeded feedback.
+            Member 1 scope is ready for the rest of the LOOP platform: PostgreSQL + Prisma,
+            NextAuth credentials login, Admin/Analyst/Viewer roles, workspace isolation, and seeded feedback.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

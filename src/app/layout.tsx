@@ -5,8 +5,8 @@ import { Providers } from "@/app/providers";
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "IntellMeet RBAC Foundation",
-  description: "Member 1 implementation for auth, database, RBAC, and workspace isolation."
+  title: "LOOP – Auth, RBAC & Workspace Foundation",
+  description: "Member 1 implementation for LOOP: PostgreSQL/Prisma auth, RBAC, and workspace isolation."
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

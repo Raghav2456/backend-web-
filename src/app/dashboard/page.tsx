@@ -55,9 +55,9 @@ export default async function DashboardPage() {
       <div className="mx-auto max-w-7xl">
         <header className="flex flex-col gap-4 border-b border-slate-200 pb-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-ink">Auth, RBAC, and workspace data</h1>
+            <h1 className="text-3xl font-bold text-ink">LOOP – Workspace Dashboard</h1>
             <p className="mt-2 text-sm text-slate-600">
-              Signed in as {session.user.email} with global role {session.user.role}.
+              Signed in as {session.user.email} &nbsp;·&nbsp; global role: <strong>{session.user.role}</strong>.
             </p>
           </div>
           <SignOutButton />

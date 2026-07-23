@@ -61,7 +61,7 @@ async function main() {
     data: {
       name: "Zidio Enterprise",
       slug: "zidio-enterprise",
-      description: "Primary workspace for IntellMeet enterprise collaboration data."
+      description: "Primary workspace for LOOP enterprise collaboration data."
     }
   });
 
@@ -98,7 +98,7 @@ async function main() {
     return {
       workspaceId: workspace.id,
       title: `${category} feedback ${itemNumber}`,
-      content: `Seeded feedback ${itemNumber} for IntellMeet. Users reported ${category.toLowerCase()} behavior during meetings, giving the team realistic data for RBAC and workspace-scoped dashboards.`,
+      content: `Seeded feedback ${itemNumber} for LOOP. Users reported ${category.toLowerCase()} behavior during meetings, giving the team realistic data for RBAC and workspace-scoped dashboards.`,
       category,
       source: sources[index % sources.length],
       status: statuses[index % statuses.length],

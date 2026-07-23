@@ -56,8 +56,19 @@ export const authOptions: NextAuthOptions = {
                 slug: true
               }
             }
-          }
+          },
+          orderBy: { createdAt: "asc" }
         });
+
+        const workspaces = memberships.map((membership) => ({
+          id: membership.workspace.id,
+          name: membership.workspace.name,
+          slug: membership.workspace.slug,
+          role: membership.role as Role
+        }));
+
+        // Primary workspace = first membership (chronologically).
+        const workspaceId = workspaces[0]?.id ?? null;
 
         return {
           id: user.id,
@@ -65,12 +76,8 @@ export const authOptions: NextAuthOptions = {
           email: user.email,
           image: user.image,
           role: user.globalRole,
-          workspaces: memberships.map((membership) => ({
-            id: membership.workspace.id,
-            name: membership.workspace.name,
-            slug: membership.workspace.slug,
-            role: membership.role as Role
-          }))
+          workspaceId,
+          workspaces
         };
       }
     })
@@ -80,6 +87,7 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.id = user.id;
         token.role = user.role ?? "VIEWER";
+        token.workspaceId = user.workspaceId ?? null;
         token.workspaces = user.workspaces ?? [];
       }
 
@@ -89,6 +97,7 @@ export const authOptions: NextAuthOptions = {
       if (session.user) {
         session.user.id = token.id as string;
         session.user.role = (token.role as Role) ?? "VIEWER";
+        session.user.workspaceId = (token.workspaceId as string | null) ?? null;
         session.user.workspaces = token.workspaces ?? [];
       }
 
