@@ -1,6 +1,4 @@
-# LOOP – Member 1 Backend Foundation
-
-This repository contains the **Member 1** backend scope for the Zidio **LOOP** project:
+Backend scope for the Zidio IntellMeet project:
 
 - Next.js App Router with TypeScript and Tailwind CSS
 - PostgreSQL database managed with **Prisma** (shared schema, aligned with Mandar's backend)
